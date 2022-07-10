@@ -1,10 +1,18 @@
 #!/bin/bash
+
+# Made by ValenceElectron
+# Version 1.1
+# Made for use with Final Fantasy XIV Online.
+
+# It is recommended to use the keybinds as are assigned here.
+# I've tried other variations, but got some strange results in game.
+
 aseqdump -p "UM-ONE" | \
 while IFS=" ," read src ev1 ev2 ch label1 data1 label2 data2 rest; do
 	case "$ev1 $ev2 $data1" in
 		# These are the natural keys from C4-C7:
 		
-		"Note on 48" ) xdotool key z ;; # This is C4, (C3 in choir notation)
+		"Note on 48" ) xdotool key period ;; # This is C4, (C3 in choir notation)
 		"Note on 50" ) xdotool key x ;;
 		"Note on 52" ) xdotool key c ;;
 		"Note on 53" ) xdotool key v ;;
@@ -39,10 +47,10 @@ while IFS=" ," read src ev1 ev2 ch label1 data1 label2 data2 rest; do
 		"Note on 68" ) xdotool key 9 ;;
 		"Note on 70" ) xdotool key 0 ;;
 		"Note on 73" ) xdotool key minus ;; # C#6
-		"Note on 75" ) xdotool key equal ;;
+		"Note on 75" ) xdotool key comma ;;
 		"Note on 78" ) xdotool key bracketleft ;;
 		"Note on 80" ) xdotool key bracketright ;;
-		"Note on 82" ) xdotool key backslash ;;
+		"Note on 82" ) xdotool key semicolon ;;
 		
 	esac
 done
